@@ -1,3 +1,11 @@
+* {
+  transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
@@ -68,3 +76,61 @@ footer {
   padding: 20px;
   color: #64748b;
 }
+/* Dark Mode */
+body.dark {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+body.dark section {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #020617, #020617);
+}
+
+body.dark h2 {
+  border-left-color: #38bdf8;
+}
+
+body.dark .skills span {
+  background: #1e293b;
+  color: #7dd3fc;
+}
+
+body.dark footer {
+  color: #94a3b8;
+}
+/* Scroll Animation */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effects */
+.project:hover {
+  transform: scale(1.02);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1000;
+}
+
